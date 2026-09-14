@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo-text.png';
 
-const Nav = () => {
+export const Nav = () => {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
    <nav className="container mx-auto max-w-full flex items-center justify-between px-4 md:px-12 lg:px-20 py-3">
@@ -34,5 +34,3 @@ const Nav = () => {
     </header>
   );
 };
-
-export default Nav;
