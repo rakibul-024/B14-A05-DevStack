@@ -2,14 +2,14 @@ import { use, useState } from 'react';
 import { toast } from 'react-toastify';
 import type { Technology } from '../types/tech';
 import { TechCard } from './TechCard';
-
+import { YourStack } from './YourStack';
 
 interface TechStackSectionProps {
   techPromise: Promise<Technology[]>;
 }
 
 export function TechStackSection({ techPromise }: TechStackSectionProps) {
- 
+
   const technologies = use(techPromise);
   const [selectedTechs, setSelectedTechs] = useState<Technology[]>([]);
 
@@ -66,7 +66,11 @@ export function TechStackSection({ techPromise }: TechStackSectionProps) {
         </div>
 
         <div className="lg:col-span-1">
-          
+          <YourStack
+            selectedTechs={selectedTechs}
+            onRemove={handleRemoveFromStack}
+            onRemoveAll={handleRemoveAll}
+          />
         </div>
       </div>
     </main>
