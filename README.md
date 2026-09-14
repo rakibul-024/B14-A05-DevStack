@@ -1,6 +1,6 @@
-# 🚀 B14-A05-DevStack
+# Dev Stack
 
-DevStack is an interactive web platform that helps developers explore frontend, backend, database, and DevOps tools, compare their features side-by-side, and dynamically build their customized tech stack for upcoming projects.
+Dev Stack is an interactive technology explorer for developers. Browse frontend, backend, database, language, styling, DevOps, and developer tools, then build a personal stack by selecting the technologies you want to use.
 
 ---
 
@@ -9,16 +9,17 @@ DevStack is an interactive web platform that helps developers explore frontend, 
 * **React.js** 
 * **Tailwind CSS**
 * **DaisyUI** 
-* **JavaScript (ES6+)**
-* **HTML5 & CSS3**
+* **TypeScript**
+* **React-Toastify**
+* **JSON data loaded from `public/data.json`**
 
 ---
 
 ## ✨ Features
 
-1. **Explore Tech Cards:** Browse through popular frameworks, databases, and tools with details like difficulty level and category.
-2. **Dynamic Stack Builder:** Add or remove items from "Your Stack" list in real-time.
-3. **Empty Stack Message:** Displays an interactive alert or empty message when no tools are selected in your stack.
+1. **Responsive navigation:** Sticky desktop navigation and a working mobile menu.
+2. **Dynamic Stack Builder:** Add or remove items from "Your Stack" in real time with duplicate protection.
+3. **Responsive technology explorer:** Cards adapt from one column on mobile to three columns on desktop.
 
 ---
 ## ❓ React Questions & Answers
@@ -35,13 +36,12 @@ JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes wr
 ---
 
 **3. What does the `useState` hook do, and where did you use it in this project?**
-`useState` is used to store and update dynamic data in a component.
-* **Where used:** I used it to hold the array of selected technologies in the "Your Stack" sidebar.
+`useState` stores changing component data. This project uses it for loaded technologies, loading status, mobile menu, and selected stack items.
 
 ---
 
 **4. What does the `useEffect` hook do, and why did you need it to load the JSON data?**
-`useEffect` handles side effects like fetching external data. I used it to load the technology data from the JSON file right after the component mounts on the screen.
+`useEffect` handles side effects like fetching external data. It resolves the local JSON fetch and places the result in component state.
 
 ---
 
